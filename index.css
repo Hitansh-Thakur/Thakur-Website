@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+/* ------------------------------------------- CSS reset ---------------------------------------- */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    font-family: 'Rubik', sans-serif;
+    overflow-x: hidden;
+    color: white;
+
+
+}
+
+/* ------------------------------------------- Utility Classes ---------------------------------------- */
+
+.flex{
+    display: flex;
+    margin: 1em .6em;
+}
+.flex-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero-margin{
+    margin: 2rem 5rem;
+}
+
+.primary-btn{
+    /* position: relative; */
+    padding:.7em .8em;
+    background-color: #e44e20;
+    border: none;
+    box-shadow: none;
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.primary-btn:hover{
+    background-color: transparent;
+    color: #e44e20;
+    outline: 2px solid #e44e20;
+}
+
+.container{
+    margin: auto 1em;
+}
+
+/* ------------------------------------------- Scroll Thing ---------------------------------------- */
+
+main{
+    /* scroll-snap-type: y proximity; */
+    /* overflow-y: scroll; */
+    height: 100vh;
+}
+
+section{
+    height: 100vh;
+    scroll-snap-align: start;
+}
+
+
+
+/* ------------------------------------------- Hero Section ---------------------------------------- */
+
+.nav{
+    display: flex;
+    padding: 0 5em;
+    margin: auto 0;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 100vw;
+    height: 5.5em;
+
+}
+
+.logo{
+    font-weight: 800;
+    color: #e44e20;
+
+}
+
+.logo > img{
+    width: 4.5rem;
+    margin-right: 8px;
+}
+.logo > span{
+    pointer-events: none;
+    font-size: 27px;
+}
+
+.navlist{
+    list-style: none;
+    display: flex;
+}
+
+.nav-items{
+    margin: 0 15px;
+    display: flex;
+    align-items: center;
+    
+}
+
+.nav-items>a:hover{
+    color: #e44e20;
+}
+
+.nav-items > a {
+    text-decoration: none;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+}
+
+
+
+
+
+
+/* .bg{
+    background-size: 100% 100%;
+    height: 100%;
+    width: 100%;
+    position: relative;
+} */
+
+
+.hero{
+    /* width: 100vw; */
+    height: 100vh;  
+    overflow-x: hidden;
+}
+
+.hero::before{
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: url(./images/website-bg.jpg);
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    z-index: -4;
+    
+}
+
+.heading{
+    width: 40%;
+    font-family: 'Abril Fatface', sans-serif;
+    font-size: 3em;
+    color: rgb(187, 175, 175);
+    margin: 5rem ;
+    margin-bottom: 2rem;
+    width: 33%;
+    margin-top: 6rem;
+    
+}
+
+.dec-text{
+    color: white;
+    margin-bottom:0;
+    width: 30%;
+}
+
+.dec-text > strong{
+    color: rgb(233, 119, 66);
+
+}
+
+.hero-btn{
+    margin-top: 1rem;
+}
+
+
+/* -----------------------------------------------------  About Section +------------------------------------------------- */
+
+.about-section{
+    /* background-image:linear-gradient(red to green) ; */
+    background: red;
+}
+
+.about{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "about-logo intro";
+    width: 80%;
+    margin: 1em auto;
+    grid-gap: 20px;
+}
+
+.about-logos{
+    grid-area: about-logo;
+    text-align: justify;
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* display: flex; */
+    /* flex: 1; */
+    /* flex-direction: column; */
+}
+
+.intro{
+    grid-area: intro;
+}
+
