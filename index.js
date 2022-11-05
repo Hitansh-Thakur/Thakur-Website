@@ -4,7 +4,6 @@ headings.forEach(heading =>{
     heading.addEventListener('click',ToggleActive,false);
 });
 
-
 function ToggleActive(){
     const currentContentEle = this.nextElementSibling;
     this.classList.add("dropdown-heading-active");
@@ -22,22 +21,9 @@ function ToggleActive(){
     }
 }   
 
-
-function HandleHeadings() {
-    
-}
-
-
-
-
-
-
-
 headings.forEach(heading =>{
     heading.addEventListener('click',() => {
         const content = heading.nextElementSibling;
         content.classList.toggle('dropdown-content-active');
-    });
-    
- 
+    }); 
 });
