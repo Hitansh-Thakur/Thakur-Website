@@ -7,12 +7,14 @@ headings.forEach(heading =>{
 
 function ToggleActive(){
     const currentContentEle = this.nextElementSibling;
+    this.classList.add("dropdown-heading-active");
 
     const isCollapsed = currentContentEle.classList.contains('dropdown-content-collasped');
     headings.forEach(heading => {
         const content = heading.nextElementSibling;
         if(!content.classList.contains('dropdown-content-collasped')){
             content.classList.add('dropdown-content-collasped');
+            heading.classList.remove("dropdown-heading-active");
         }
     });
     if (isCollapsed) {
@@ -21,7 +23,9 @@ function ToggleActive(){
 }   
 
 
-
+function HandleHeadings() {
+    
+}
 
 
 
