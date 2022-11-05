@@ -10,8 +10,7 @@ body {
   background: #f7f7f7;
   color: #cfd6da;
   line-height: 1.4;
-  font-family: sans-serif;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Roboto Condensed","Source Sans Pro";
 }
 
 h1,
@@ -42,6 +41,9 @@ h2::after {
   width: 70%;
   height: 2px;
 }
+h2,h3{
+    letter-spacing: 1.5px;
+}
 
 a{
     text-decoration: none;
@@ -66,7 +68,7 @@ section + section {
   --dark-color-500: #26292b;
 
   --accent-color-400: rgb(255, 190, 167);
-  --accent-color-600: rgb(255, 112, 60);
+  --accent-color-600: rgb(255, 93, 35);
 }
 
 /* -------------------------- Utility Classes ----------------------*/
@@ -75,7 +77,7 @@ section + section {
 }
 
 .primary-heading {
-  margin-block: 1rem;
+  margin-block: .5rem;
   font-size: var(--fs-800);
   display: block;
 }
@@ -124,6 +126,7 @@ section + section {
   min-height: calc(100vh - var(--navbar-height) + 0.5em);
   overflow: hidden;
   width: 100vw;
+  background-color: #3b4042;
 }
 
 .slide {
@@ -133,21 +136,30 @@ section + section {
   width: 100%;
   height: 100%;
   opacity: 0;
-  transition: opacity 1s ease-in-out;
+  transition: opacity .5s ease-in-out;
 }
 
 /*-------------------------Images into the slides ----------------------------*/
 .slide:first-child {
   background: url(./images/1.jpeg) no-repeat center center/cover;
+  background-color: #3b4042;
+  background-blend-mode: overlay;
 }
 .slide:nth-child(2) {
   background: url(./images/2.jpg) no-repeat center center/cover;
+  background-color: #3b4042;
+  background-blend-mode: overlay;
+
 }
 .slide:nth-child(3) {
   background: url(./images/3.jpeg) no-repeat center center/cover;
+  background-color: #3b4042;
+  background-blend-mode: overlay;
 }
 .slide:nth-child(4) {
   background: url(./images/4.jpeg) no-repeat center center/cover;
+  background-color: #3b4042;
+  background-blend-mode: overlay;
 }
 
 /*------------------------- current class ----------------------------*/
@@ -251,6 +263,7 @@ section + section {
 #why-we {
   width: 80%;
   margin-inline: auto;
+  margin-bottom: 1.5em;
 }
 
 #why-we * {
@@ -294,9 +307,7 @@ section + section {
 }
 .dropdown-heading-active:after {
     background-color: white;
-    width: 100%;
-    
-    
+    width: 100%;   
 }
 
 .dropdown-heading:hover::after {
@@ -309,13 +320,12 @@ section + section {
   max-height: 100%;
   background-color: var(--accent-color-600);
   padding: 1rem;
-  color: #cfd6da !important;
+  color: #ffffff !important;
   transition: 1s;
 }
 
 .dropdown-heading {
   background-color: var(--accent-color-400);
-  /* color: white !important; */
 }
 
 .dropdown-content-collasped {
@@ -327,7 +337,7 @@ section + section {
 /* ---------------- Footer ------------------------- */
 footer {
   background: var(--dark-color-500);
-  padding: 1rem;
+  padding: 2.5rem 1rem;
 }
 .footer {
   display: flex;
@@ -339,7 +349,9 @@ footer {
   align-items:flex-start;
 }
 
-
+.footer h3{
+    font-size: 1.1em;
+}
 
 .footer-section{
     width: 100%;  
@@ -348,60 +360,55 @@ footer {
 .footer-link{
     text-decoration: none;
     border-bottom: 1px solid rgb(152, 152, 152);
-    line-height: 2;
-    
-    /* position: relative; */
+    padding-bottom: .25em;
 }
-.address{
+.footer-contact div{
     display: flex;
 }
+
+.footer-contact> div[type="GetInTouch"]{
+    padding-block:.25em ;
+}
+
+.footer-contact> div[type="GetInTouch"]::before{
+    padding-inline: 8px;
+}
+
 .address::before{
     content:url(./images/address.svg);
-    /* position: absolute;
-    right: 0;
-    top: 0; */
-   /* background-color: white;  */
-   padding-inline: 5px;
-    /* width: 100%;
-    height: 100%; */
-
 }
 
-/* .footer-link::after{
-    content: "";
-    position:absolute;
-    height: 2px;
-    width: 100%;
-    background-color: white;
-    left: 0;
-    bottom: 0;
-    z-index: 3;
-
-
-} */
-
-/* .footer-about {
-  flex: 1;
+.contact::before{
+    content:url(./images/contact.svg);
 }
 
-.footer-products {
-  flex: 1;
+.mail::before{
+    content:url(./images/mail.svg);
 }
-.footer-contact {
-  flex: 1;
-} */
+
 
 .footer-products a {
-  color: #cfd6da;
+  color: #828282;
+  font-weight:bold;
+  letter-spacing: 1.5px;
 
   /* padding-inline-end: 3.5rem; */
 }
 
 .footer-products > ul {
-  /* display: grid; */
-  /* grid-template-columns: 1fr 1fr; */
+
   list-style: none;
   line-height: 1.5;
+}
+
+.copy{
+    float: right;
+    font-size: .75em;
+    margin-inline: 1em;
+    margin-top:1em ;
+  letter-spacing: 1.5px;
+
+    
 }
 
 /*------------------------- Responsive ----------------------------*/
