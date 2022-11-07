@@ -69,6 +69,9 @@ section + section {
 
   --accent-color-400: rgb(255, 190, 167);
   --accent-color-600: rgb(255, 93, 35);
+
+
+  --product-padding: 1rem;
 }
 
 /* -------------------------- Utility Classes ----------------------*/
@@ -80,6 +83,19 @@ section + section {
   margin-block: .5rem;
   font-size: var(--fs-800);
   display: block;
+}
+
+.primary-btn {
+  margin-top: 2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  letter-spacing: 1px;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  background: #e65400;
+  color: white;
+  transition: 200ms ease-in-out;
 }
 
 /* ------------------------ Navigation --------------------------- */
@@ -166,6 +182,12 @@ section + section {
   background-blend-mode: overlay;
 }
 
+.slide:nth-child(5) {
+  background: url(./images/hbeam.jpg) no-repeat center center/cover;
+  background-color: var(--slide-ovelay-color);
+  background-blend-mode: overlay;
+}
+
 /*------------------------- current class ----------------------------*/
 .slide.current {
   opacity: 1;
@@ -228,7 +250,7 @@ section + section {
 
 /* ------------------------ product Section ---------------------------- */
 
-#product {
+#product-section {
   align-items: center;
   justify-content: center;
   min-height: 45rem;
@@ -238,27 +260,101 @@ section + section {
   background-attachment: fixed;
 }
 
-.product {
+.product-container {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 5rem;
   flex-wrap: wrap;
-}
-.product-content {
-  max-width: 30ch;
-  font-size: var(--fs-400);
-
+  justify-content: center;
+  gap: 4rem;
+  align-items: center;
 }
 
-.product-content > h2 {
-  font-size: var(--fs-500);
+.product:nth-child(1) {
+  background: url(https://images.unsplash.com/photo-1563391017873-6e6beab67fed?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fGNvbnN0cnVjdGlvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60);
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: multiply;
 }
 
-.product-img{
-  width: 100%;
-  height: 5em;
+.product:nth-child(2) {
+  background: url("./images/hbeam.jpg");
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: multiply;
 }
+
+.product:nth-child(3) {
+  background: url(https://images.unsplash.com/photo-1563391017873-6e6beab67fed?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fGNvbnN0cnVjdGlvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60);
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: multiply;
+}
+
+.product {
+  overflow-y: hidden;
+  cursor: pointer;
+  padding-top: 6rem;
+  color: aliceblue;
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: multiply;
+  border-radius: 0.5em;
+  box-shadow: 2px 2px 10px 2px black;
+  transition: box-shadow 250ms ease-in-out, scale 450ms ease;
+}
+
+.product .product-content {
+  padding-top: 2.5em;
+  max-width: 35ch;
+  border-radius: inherit;
+  padding-bottom: 2em;
+  padding-left: var(--product-padding);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.719) 0%, rgba(0, 0, 0, 0.562) 81%, rgba(0, 0, 0, 0) 100%);
+  background-blend-mode: multiply;
+  transform: translateY(65%);
+  transform-origin: bottom;
+  transition: 350ms ease-in-out;
+}
+.product .product-content h3 {
+  padding-bottom: 0.25em;
+  margin-bottom: 0.75em;
+  position: relative;
+  width: max-content;
+  font-size: 1.25rem;
+}
+.product .product-content h3::after {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 0;
+  left: calc(var(--product-padding) * -1);
+  width: calc(100% + var(--product-padding));
+  height: 3px;
+  background-color: #e65400;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: 300ms 300ms ease-in-out;
+}
+.product:hover, .product:focus {
+  scale: 1.05;
+  box-shadow: 4px 4px 15px 5px black;
+}
+.product:hover h3::after, .product:focus h3::after {
+  transform: scaleX(1);
+}
+.product:hover .product-content, .product:focus .product-content {
+  transform: translateY(0);
+}
+
+
+
+
+
+
+
+
+
+
+
 /* src="https://images.unsplash.com/photo-1563391017873-6e6beab67fed?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fGNvbnN0cnVjdGlvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60" alt=""  */
 /* --------------   WHY WE? SECTION-------------------*/
 #why-we {
