@@ -11,6 +11,8 @@ body {
   color: #cfd6da;
   line-height: 1.4;
   font-family: "Roboto Condensed","Source Sans Pro";
+  background-image: url("./images/bgpattern.webp");
+  background-size: 100px;
 }
 
 h1,
@@ -80,9 +82,11 @@ section + section {
 }
 
 .primary-heading {
-  margin-block: .5rem;
+  margin-block: 1.5rem;
   font-size: var(--fs-800);
   display: block;
+  color: #202D52 !important;
+  font-family: 'source sans pro';
 }
 
 .primary-btn {
@@ -212,11 +216,7 @@ section + section {
   
 }
 
-.slide.current .content {
-  /* opacity: 1;
-  transform: translateX(600px);
-  transition: all 900ms 600ms ease; */
-}
+
 
 /*------------------------- buttons ----------------------------*/
 .buttons button#next {
@@ -253,12 +253,11 @@ section + section {
 #product-section {
   align-items: center;
   justify-content: center;
-  min-height: 45rem;
-  background: url("./images/laser-cutting.jpg") center center/cover;
-  background-color: #26292b;
-  background-blend-mode: overlay;
-  background-attachment: fixed;
+
+
 }
+
+
 
 .product-container {
   display: flex;
@@ -269,7 +268,7 @@ section + section {
 }
 
 .product:nth-child(1) {
-  background: url(https://images.unsplash.com/photo-1563391017873-6e6beab67fed?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fGNvbnN0cnVjdGlvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60);
+  background: url(https://5.imimg.com/data5/SELLER/Default/2021/9/LM/LH/UR/4083994/4-torch-wearplate-cladding-system-500x500.jpg);
   background-position: center;
   background-size: cover;
   background-blend-mode: multiply;
@@ -320,6 +319,7 @@ section + section {
   position: relative;
   width: max-content;
   font-size: 1.25rem;
+  
 }
 .product .product-content h3::after {
   content: "";
